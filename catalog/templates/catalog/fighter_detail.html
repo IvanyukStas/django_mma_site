@@ -6,7 +6,9 @@
             <li><strong>Start Carrier: </strong>{{ fighter.start_carrier }}</li>
             {% if fighter.end_carrier %}
             <li><strong>End Carrier: </strong>{{ fighter.end_carrier }}</li>
+
             {% endif %}
+            <li><img src="{{ fighter.fighter_image.url}}"></li>
         </ul>
         {% else %}
         <p class="text-danger">NO   FIGTHERS</p>
