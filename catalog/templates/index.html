@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Index of project</h1>
+    {% if fighters %}
+        <ul>
+    {% for fighter in fighters %}
+        <li id="{{ forloop.counter0 }}">fighter</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p class="text-danger">No one Fighters</pclass>
+    {% endif %}
+
+{% endblock %}

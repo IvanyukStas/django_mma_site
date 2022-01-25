@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if fighter_list %}<ul>
+        {% for fighter in fighter_list %}
+            <li><a href="{% url 'fighter-detail' fighter.id %}"><strong>Fighter: </strong>{{ fighter }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-danger">NO   FIGTHERS</p>
+    {% endif %}
+
+{% endblock %}

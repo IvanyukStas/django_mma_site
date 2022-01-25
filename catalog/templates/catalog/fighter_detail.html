@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if fighter %}<ul>
+            <li><strong>Fighter: </strong>{{ fighter }}</li>
+            <li><strong>Birthday: </strong>{{ fighter.birthday }}</li>
+            <li><strong>Start Carrier: </strong>{{ fighter.start_carrier }}</li>
+            {% if fighter.end_carrier %}
+            <li><strong>End Carrier: </strong>{{ fighter.end_carrier }}</li>
+            {% endif %}
+        </ul>
+        {% else %}
+        <p class="text-danger">NO   FIGTHERS</p>
+    {% endif %}
+
+{% endblock %}
